@@ -11,7 +11,8 @@ body {
 
 .hero-unit {
   margin: 50px auto 0 auto;
-  width: 600px;
+  //width: 600px;
+  text-align: center;
   font-size: 18px;
   font-weight: 200;
   line-height: 30px;
@@ -22,5 +23,60 @@ body {
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
+    margin: 15px 0
   }
+
+  .td-filter {
+    display: inline-block;
+    padding: 5px 15px;
+    margin: 5px 0 -1px;
+    color: lightgray;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .active-filter {
+    border: 1px solid lightgray;
+    margin: 4px -1px -1px;
+    border-bottom: 0;
+    background-color: #eee;
+    color: black;
+  }
+}
+
+#todo-form {
+  border-top: 1px solid lightgray;
+  padding-top: 4px;
+
+  input {
+    width: 98%;
+    border-radius: 3px;
+    border: 1px solid lightgray;
+    padding: 2px 8px;
+  }
+
+  #td-list {
+    list-style: none;
+    padding-left: 0;
+    text-align: left;
+  }
+
+  li span {
+    display: none;
+  };
+
+  li:hover span{
+    display: inline-block;
+    float: right;
+    color: red;
+  }
+
+
+  .complete {
+    text-decoration: line-through;
+    color: lightgray;
+  }
+
 }

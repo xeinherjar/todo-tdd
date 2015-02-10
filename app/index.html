@@ -24,28 +24,26 @@
   <body>
 
     <div class="hero-unit">
-      <h1>'Allo, 'Allo!</h1>
-      <p>You now have</p>
-      <ul>
-        <li>HTML5 Boilerplate</li>
-        <li>Normalize CSS</li>
-        <li>Sass</li>
-        <li>Modernizr</li>
-        <li>Bourbon & Neat</li>
-        <li>UnderscoreJS</li>
-      </ul>
-      <p>Don't forget to update your readme file!!</p>
+      <h1> TODO! </h1>
+      <div class="td-filter active-filter" id="filter-all">all</div>
+      <div class="td-filter" id="filter-complete">complete</div>
+      <div class="td-filter" id="filter-open">open</div>
+      <form id="todo-form" action="">
+        <input type="text" name="td-task" placeholder="Enter Task" />
+        <ul id="td-list"></ul>
+        <div id="td-stats"></div>
+      </form>
     </div>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
-    <script src="../bower_components/underscore/underscore.js"></script>
     <script src="../bower_components/lodash/lodash.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
         <!-- build:js scripts/main.js -->
+        <script src="/scripts/todo-app.js"></script>
         <script src="scripts/main.js"></script>
         <!-- endbuild -->
 </body>
