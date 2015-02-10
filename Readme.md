@@ -1,3 +1,17 @@
-## Yo, I'm a Readme
+## Homework 017
 
-You should probably update me so people looking at your code have an idea what it is being used for :)
+Todo app built with TDD.
+
+To Build:
+  - clone repo
+  - `npm install`
+  - `bower install`
+  - `gulp build`
+
+To run test:
+  - clone repo
+  - `cd test`
+  - `bower install`
+  - open test/index.html
+
+License: MIT
