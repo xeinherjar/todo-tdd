@@ -6,19 +6,35 @@ var tdList = $('#td-list');
 var tdStats = $('#td-stats');
 
 var updateTodo = function () {
-  var html = '';
-  for (var i = 0; i < TD.todos.length; i++) {
-    if (!TD.todos[i].hidden) {
-      var td = TD.todos[i];
-      if(td.complete) {
-        html += '<li id="' + td.id + '" class="complete">' + 
-                 td.name + '<span>x</span></li>';
 
-      } else {
-        html += '<li id="' + td.id + '">' + 
-                 td.name + '<span>x</span></li>';
+  var filter = $('.active-filter').text();  
+  var html = '';
+
+    for (var i = 0; i < TD.todos.length; i++) {
+      if (!TD.todos[i].hidden) {
+        var td = TD.todos[i];
+        switch (filter) {
+        case 'complete':
+          if(td.complete) {
+            html += '<li id="' + td.id + '" class="complete">' + 
+                      td.name + '<span>x</span></li>'; } 
+        break;
+        case 'open':
+
+          if(!td.complete) {
+           html += '<li id="' + td.id + '">' + 
+                    td.name + '<span>x</span></li>'; }
+        break;
+        case 'all':
+          if(td.complete)  {
+            html += '<li id="' + td.id + '" class="complete">' + 
+                      td.name + '<span>x</span></li>'; 
+            } else {
+             html += '<li id="' + td.id + '">' + 
+                    td.name + '<span>x</span></li>';
+            }
+        }
       }
-    }
   }
 
   var stats = "<span>" + TD.completeCount + " of " +
@@ -54,7 +70,7 @@ todoForm.on('click', function(e) {
 $('.td-filter').on('click', function(e) {
   $('.td-filter').removeClass('active-filter');
   $(this).addClass('active-filter');
-
+  updateTodo();
 });
 
 
