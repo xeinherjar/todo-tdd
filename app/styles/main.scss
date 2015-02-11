@@ -98,10 +98,16 @@ body {
     color: red;
   }
 
+  li {
+    padding-left: 4px;
+    margin: 2px 0;
+  }
 
   .complete {
     text-decoration: line-through;
     color: lightgray;
+    border-left: 1px solid green;
+    padding-left: 3px;
   }
 
 }
