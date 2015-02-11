@@ -117,7 +117,7 @@ todoForm.on('keypress', function(e) {
     tdTask.val('');
 
     updateTodo();
-    allowedSave = true;
+    saveAllowed = true;
     saveButton.removeClass('disabled');
   }
 });
