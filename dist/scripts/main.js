@@ -171,11 +171,15 @@ todoForm.on('click', function(e) {
   if(_.startsWith(e.target.id, 'td')) {
     TD.toggleComplete(e.target.id);
     updateTodo();
+    saveAllowed = true;
+    $(saveButton).removeClass('disabled');
   }
   
   if(e.target.localName === 'span') {
     TD.remove(e.target.parentElement.id);
     updateTodo();
+    saveAllowed = true;
+    $(saveButton).removeClass('disabled');
   }
 });
 
