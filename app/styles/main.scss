@@ -44,6 +44,29 @@ body {
     background-color: #eee;
     color: black;
   }
+    .button {
+    display: inline-block;
+    background-color: #7997a1;
+    padding: 4px 8px;
+    border-radius: 3px;
+    color: white;
+    margin-top: 15px;
+
+    &:hover {
+      cursor: pointer;
+      background-color: #9bc2cf;
+    }
+  }
+
+  .disabled {
+    background-color: #334045;
+    cursor: default;
+
+    &:hover {
+      cursor: default;
+      background-color: #334045;
+    }
+  }
 }
 
 #todo-form {
